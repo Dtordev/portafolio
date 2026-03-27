@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("technologies").innerHTML = html1st;
     document.getElementById("knowledge").innerHTML = html2nd;
+    emailjs.init("DN_48DnHWzQqTgoLS");
 })
 
 document.getElementById('form').addEventListener('submit', function (event) {
@@ -80,11 +81,49 @@ function validateForm() {
     document.getElementById('alert').style.display = 'none';
     document.querySelector('.code-loader').style.display = 'flex';
     document.querySelector('.btn-form').style.display = 'none';
-    sendEmail(Data);
+    sendNotification(Data);
 }
 
-async function sendEmail(Data) {
-    console.log(Data);
+async function sendNotification(Data) {
+    try {
+        await emailjs.send(
+            "service_hmldngi",
+            "template_lyttmcz",
+            {
+                name: Data.Name.Value,
+                mail: Data.Email.Value,
+                subject: Data.Subject.Value,
+                message: Data.Message.Value
+            }
+        );
+        // éxito
+        alert("Mensaje enviado correctamente");
+        sendConfirmation(Data)
+    } catch (error) {
+        console.error(`Mensaje de notificación no enviado: ${error}`);
+    } finally {
+        document.querySelector('.btn-form').style.display = 'block';
+        document.querySelector('.code-loader').style.display = 'none';
+        document.getElementById('form').reset();
+    }
+}
+
+async function sendConfirmation(Data) {
+    try {
+        await emailjs.send(
+            "service_hmldngi",
+            "template_0fobwnh",
+            {
+                name: Data.Name.Value,
+                mail: Data.Email.Value,
+                subject: Data.Subject.Value,
+                message: Data.Message.Value
+            }
+        );
+        console.log("Mensaje de confirmación enviado correctamente");
+    } catch (error) {
+        console.error(`Mensaje de confirmación no enviado: ${error}`);
+    }
 }
 
 function validateData(data) {
