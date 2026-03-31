@@ -63,9 +63,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(this.getAttribute('href'));
         if (!target) return;
 
-        const y = target.getBoundingClientRect().top 
-                + window.pageYOffset 
-                - offset;
+        const y = target.getBoundingClientRect().top
+            + window.pageYOffset
+            - offset;
 
         window.scrollTo({
             top: y,

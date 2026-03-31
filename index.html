@@ -110,6 +110,7 @@
     <section id="experience">
         <div class="container">
             <div class="content">
+                <div class="bar"></div>
                 <h1>Experiencia</h1>
                 <div class="line"></div>
                 <p>Mi experiencia profesional se ha desarrollado a partir de una evolución progresiva desde la formación
@@ -288,73 +289,67 @@
     </section>
     <section id="contact">
         <div class="container">
-            <div class="column">
-                <h1>Trabajemos juntos</h1>
-                <!-- <p>Ponte en contacto conmigo</p> -->
-                <form id="form">
-                    <div class="box">
-                        <input id="name" name="name" type="text" maxlength="40" autocomplete="off" required>
-                        <label>Nombre</label>
+            <div class="bar"></div>
+            <h1>Trabajemos juntos</h1>
+            <div class="columns">
+                <div class="column">
+                    <h3>Ponte en contacto conmigo</h3>
+                    <p>Si tienes una idea de proyecto o buscas fortalecer tu equipo, no dudes en contactarme para
+                        colaboraciones freelance u oportunidades profesionales.</p>
+                    <div class="network social">
+                        <a href="mailto:dtorresmadv@gmail.com" target="_blank"><i
+                                class="fa-regular fa-envelope"></i></a>
+                        <a href="https://wa.me/573124135691?text=Hola David, quiero contactar contigo."
+                            target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/dtorresma/" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Dtordev" target="_blank"><i class="fa-brands fa-github"></i></a>
                     </div>
-                    <div class="box">
-                        <input id="email" name="email" type="text" maxlength="60" autocomplete="off" required>
-                        <label>Correo</label>
-                    </div>
-                    <div class="box">
-                        <input id="subject" name="subject" type="text" maxlength="60" autocomplete="off" required>
-                        <label>Asunto</label>
-                    </div>
-                    <div class="box">
-                        <textarea id="message" name="message" placeholder="Quiero contactar contigo." maxlength="150"
-                            autocomplete="off" required></textarea>
-                        <label>Escríbeme un mensaje</label>
-                    </div>
-                    <p id="alert">Por favor revisa que los campos coloreados no se encuentren vacíos y/o el correo este
-                        correcto.</p>
-                    <div class="box">
-                        <button class="btn-form" onclick="validateForm()">Enviar</button>
-                        <div class="code-loader">
-                            <span>{</span><span>}</span>
+                    <!-- <div class="network">
+                        <div class="typewriter">
+                            <div class="slide"><i></i></div>
+                            <div class="paper"></div>
+                            <div class="keyboard"></div>
                         </div>
-                    </div>
-                </form>
-            </div>
-            <div class="column">
-                <div class="network">
-                    <div class="typewriter">
-                        <div class="slide"><i></i></div>
-                        <div class="paper"></div>
-                        <div class="keyboard"></div>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="network">
-                    <a>
-                        <i class="fa-solid fa-thumbtack"></i>
-                        <p>Bogotá, Colombia</p>
-                    </a>
-                </div>
-                <div class="network">
-                    <a href="https://wa.me/573143980227?text=Hola David, quiero contactar contigo." target="_blank">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <p>(+57) 314 398 0227</p>
-                    </a>
-                </div>
-                <div class="network">
-                    <a href="mailto:dtorresmadv@gmail.com" target="_blank">
-                        <i class="fa-solid fa-paper-plane"></i>
-                        <p>dtorresmadv@gmail.com</p>
-                    </a>
-                </div>
-                <div class="network social">
-                    <a href="https://www.linkedin.com/in/dtorresma/" target="_blank"><i
-                            class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/dtorresma02" target="_blank"><i
-                            class="fa-brands fa-instagram"></i></a>
+                <div class="column">
+                    <form id="form">
+                        <div class="input-group">
+                            <input id="name" name="name" type="text" maxlength="50" autocomplete="off" required>
+                            <label>Tu nombre</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input id="email" name="email" type="text" maxlength="70" autocomplete="off" required>
+                            <label>Tu correo electrónico</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input id="subject" name="subject" type="text" maxlength="80" autocomplete="off" required>
+                            <label>¿En qué puedo ayudarte?</label>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea id="message" name="message" maxlength="450" autocomplete="off"
+                                required></textarea>
+                            <label>Escríbeme un mensaje</label>
+                        </div>
+                        <p id="alert">Por favor, verifica que los campos resaltados no estén vacíos y que el correo sea
+                            válido.</p>
+                        <div class="box">
+                            <button class="btn-form" onclick="validateForm()"><i
+                                    class="fa-solid fa-paper-plane"></i></button>
+                            <div class="code-loader">
+                                <span>{</span><span>}</span>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
-    <footer>Dtor.dev &copy; 2026</footer>
+    <footer>&copy; 2026 Dtor.dev. Todos los derechos reservados.</footer>
     <section class="script">
         <script src="js/main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
