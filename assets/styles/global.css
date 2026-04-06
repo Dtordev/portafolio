@@ -498,7 +498,7 @@ header {
     opacity: .9;
 }
 
-#experience .container .experience .exp p {
+#experience .container .experience .exp li {
     font-size: .8rem;
 }
 
@@ -652,6 +652,11 @@ header {
 
 #contact .container h1 {
     margin-bottom: 30px;
+}
+
+#contact .container h3 {
+    margin-top: 10px;
+    color: gainsboro;
 }
 
 #contact .container .columns {

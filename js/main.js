@@ -128,9 +128,9 @@ async function validateForm() {
         alert("Mensaje enviado correctamente");
         form.reset();
 
-        sendConfirmation(data).catch(error => {
-            console.warn("No se pudo enviar confirmación:", error);
-        });
+        // sendConfirmation(data).catch(error => {
+        //     console.warn("No se pudo enviar confirmación:", error);
+        // });
     } catch (error) {
         console.error("No se pudo enviar notificación:", error);
     } finally {
